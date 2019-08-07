@@ -128,6 +128,9 @@ class LoginControl extends React.Component {
     return (
       <div>
         <Greeting isLoggedIn={isLoggedIn} />
+        <div>
+          The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+        </div>
         {button}
       </div>
     );
@@ -149,7 +152,7 @@ function Mailbox(props) {
 
 const messages = ['React', 'Re: React', 'Re:Re: React'];
 ReactDOM.render(
-  <Mailbox unreadMessages={messages} />,
+  <LoginControl />,
   document.getElementById('root')
 );
 
