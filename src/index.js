@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import Page from './chapters1-7';
-import ListsKeys from './ListsKeys';
+import { NumberList, numbers } from './ListsKeys';
 
 const tree = (
   <div>
     <Page />
-    <ListsKeys.List />
-    <ListsKeys.NumberList numbers={ListsKeys.numbers} />
+    <NumberList numbers={numbers} />
   </div>
 );
 
