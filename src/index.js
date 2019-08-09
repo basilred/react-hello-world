@@ -4,7 +4,7 @@ import './index.css';
 // import App from './App';
 import Page from './chapters1-7';
 import { NumberList, numbers, Blog, posts } from './ListsKeys';
-import { NameForm, EssayForm, FlavorForm } from './Forms';
+import { NameForm, EssayForm, FlavorForm, Reservation } from './Forms';
 
 const tree = (
   <div>
@@ -14,6 +14,7 @@ const tree = (
     <NameForm />
     <EssayForm />
     <FlavorForm />
+    <Reservation />
   </div>
 );
 
