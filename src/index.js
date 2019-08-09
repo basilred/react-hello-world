@@ -5,6 +5,7 @@ import './index.css';
 import Page from './chapters1-7';
 import { NumberList, numbers, Blog, posts } from './ListsKeys';
 import { NameForm, EssayForm, FlavorForm, Reservation } from './Forms';
+import { Calculator } from './LiftingStateUp';
 
 const tree = (
   <div>
@@ -15,6 +16,7 @@ const tree = (
     <EssayForm />
     <FlavorForm />
     <Reservation />
+    <Calculator />
   </div>
 );
 
