@@ -6,6 +6,7 @@ import Page from './chapters1-7';
 import { NumberList, numbers, Blog, posts } from './ListsKeys';
 import { NameForm, EssayForm, FlavorForm, Reservation } from './Forms';
 import Calculator from './LiftingStateUp';
+import { WelcomeDialog, App } from './CompositionVsInheritance';
 
 const tree = (
   <div>
@@ -17,6 +18,8 @@ const tree = (
     <FlavorForm />
     <Reservation />
     <Calculator />
+    <WelcomeDialog />
+    <App />
   </div>
 );
 
