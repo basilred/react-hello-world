@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Page from './chapters1-7';
-import { NumberList, numbers, Blog, posts } from './ListsKeys';
-import { NameForm, EssayForm, FlavorForm, Reservation } from './Forms';
-import Calculator from './LiftingStateUp';
-import { WelcomeDialog, App, SignUpDialog } from './CompositionVsInheritance';
 
-const tree = (
-  <div>
-    <Page />
-    <NumberList numbers={numbers} />
-    <Blog posts={posts} />
-    <NameForm />
-    <EssayForm />
-    <FlavorForm />
-    <Reservation />
-    <Calculator />
-    <WelcomeDialog />
-    <App />
-    <SignUpDialog />
-  </div>
-);
+function ListItem({ item }) {
+  return (
+    <Fragment>
+      <dt>{item.term}</dt>
+      <dd>{item.description}</dd>
+    </Fragment>
+  );
+}
+
+function Glossary(props) {
+  return (
+    <dl>
+      {props.items.map(item => (
+        <ListItem item={item} key={item.id} />
+      ))}
+    </dl>
+  );
+}
+
+const items = [
+  { id: 1, term: 'iphone', description: 'mobile phone' },
+  { id: 2, term: 'apple', description: 'fruit' },
+];
 
 ReactDOM.render(
-  tree,
+  <Glossary items={items}/>,
   document.getElementById('root')
 );
