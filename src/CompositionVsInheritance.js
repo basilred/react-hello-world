@@ -8,16 +8,16 @@ function FancyBorder(props) {
   );
 }
 
-function Dialog(props) {
+function Dialog({ title, message, children }) {
   return (
     <FancyBorder color="blue">
       <h1 className="Dialog-title">
-        {props.title}
+        {title}
       </h1>
       <p className="Dialog-message">
-        {props.message}
+        {message}
       </p>
-      {props.children}
+      {children}
     </FancyBorder>
   );
 }
@@ -62,14 +62,14 @@ class SignUpDialog extends React.Component {
   }
 }
 
-function SplitPane(props) {
+function SplitPane({ left, right }) {
   return (
     <div className="SplitPane">
       <div className="SplitPane-left">
-        {props.left}
+        {left}
       </div>
       <div className="SplitPane-right">
-        {props.right}
+        {right}
       </div>
     </div>
   );

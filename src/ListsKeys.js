@@ -2,13 +2,11 @@ import React from 'react';
 
 const numbers = [1, 2, 3, 4, 5];
 
-function ListItem(props) {
-  return <li>{props.value}</li>;
+function ListItem({ value }) {
+  return <li>{value}</li>;
 }
 
-function NumberList(props) {
-  const numbers = props.numbers;
-
+function NumberList({ numbers }) {
   return (
     <ul>
       {numbers.map(number =>

@@ -38,8 +38,7 @@ class TemperatureInput extends React.Component {
   }
 
   render() {
-    const temperature = this.props.temperature;
-    const scale = this.props.scale;
+    const { temperature, scale } = this.props;
 
     return (
       <fieldset>
@@ -50,8 +49,8 @@ class TemperatureInput extends React.Component {
   }
 }
 
-function BoilingVerdict(props) {
-  if (props.celsius >= 100) {
+function BoilingVerdict({ celsius }) {
+  if (celsius >= 100) {
     return <p>The water would boil.</p>;
   }
   return <p>The water would not boil.</p>;
