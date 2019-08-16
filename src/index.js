@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Context/app';
+import CustomTextInput from './refs-and-the-dom';
 
 ReactDOM.render(
-  <App />,
+  <CustomTextInput />,
   document.getElementById('root')
 );
