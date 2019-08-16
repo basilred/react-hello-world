@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CustomTextInput extends React.Component {
+class CustomTextInput extends React.Component {
   constructor(props) {
     super(props);
     // создадим реф в поле `textInput` для хранения DOM-элемента
@@ -22,6 +22,24 @@ export default class CustomTextInput extends React.Component {
         <input type="text" ref={this.textInput} />
         <input type="button" value="Focus the text input" onClick={this.focusTextInput} />
       </div>
+    );
+  }
+}
+
+
+export default class AutoFocusTextInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.textInput = React.createRef();
+  }
+
+  componentDidMount() {
+    this.textInput.current.focusTextInput();
+  }
+
+  render() {
+    return (
+      <CustomTextInput ref={this.textInput} />
     );
   }
 }
