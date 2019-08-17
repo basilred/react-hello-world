@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CustomTextInput from './refs-and-the-dom/ref-inside-functional-component';
+import CustomTextInput from './refs-and-the-dom/callback-ref';
 
 ReactDOM.render(
   <CustomTextInput />,
