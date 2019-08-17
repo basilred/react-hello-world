@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AutoFocusTextInput from './refs-and-the-dom';
+import CustomTextInput from './refs-and-the-dom/ref-inside-functional-component';
 
 ReactDOM.render(
-  <AutoFocusTextInput />,
+  <CustomTextInput />,
   document.getElementById('root')
 );
