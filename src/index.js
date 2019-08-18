@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CustomTextInput from './refs-and-the-dom/callback-ref';
+import Columns from './Fragments/Fragments';
+
+const Table = () => (
+  <table>
+    <tbody>
+      <tr>
+        <Columns />
+      </tr>
+    </tbody>
+  </table>
+);
 
 ReactDOM.render(
-  <CustomTextInput />,
+  <Table />,
   document.getElementById('root')
 );
