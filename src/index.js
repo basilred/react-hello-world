@@ -4,16 +4,16 @@ import './index.css';
 import { List, withLogs } from './HOC';
 
 const ListWithLogs = withLogs(List);
-let list = ['first', 'second', 'third'];
+const list = ['first', 'second', 'third'];
 
-ReactDOM.render(
-  <ListWithLogs list={list} />,
-  document.getElementById('root')
+const Tree = () => (
+  <div className="Tree">
+    <List list={list} />
+    <ListWithLogs name="Logs" listed={true} list={list} />
+  </div>
 );
 
-list = ['odin', 'dva', 'tree'];
-
 ReactDOM.render(
-  <ListWithLogs list={list} />,
+  <Tree />,
   document.getElementById('root')
 );
