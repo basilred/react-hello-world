@@ -21,8 +21,12 @@ function withLogs(WrappedComponent) {
     }
 
     render() {
+      const {name, listed, ...passThroughProps} = this.props;
+      console.log('Own props: ', [name, listed]);
+      console.log('Original props: ', passThroughProps);
+
       return (
-        <WrappedComponent {...this.props} />
+        <WrappedComponent {...passThroughProps} />
       );
     }
   }
