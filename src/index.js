@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Columns from './Fragments/Fragments';
+import { List, withLogs } from './HOC';
 
-const Table = () => (
-  <table>
-    <tbody>
-      <tr>
-        <Columns />
-      </tr>
-    </tbody>
-  </table>
+const ListWithLogs = withLogs(List);
+const list = ['first', 'second', 'third'];
+
+const Tree = () => (
+  <div className="Tree">
+    <List list={list} />
+    <ListWithLogs name="Logs" listed={true} list={list} />
+  </div>
 );
 
 ReactDOM.render(
-  <Table />,
+  <Tree />,
   document.getElementById('root')
 );
