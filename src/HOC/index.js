@@ -15,11 +15,6 @@ class List extends React.Component {
 // HOC
 function withLogs(WrappedComponent) {
   return class WithLogs extends React.Component {
-    componentWillReceiveProps(nextProps) {
-      console.log('Current props: ', this.props);
-      console.log('Next props: ', nextProps);
-    }
-
     render() {
       const {name, listed, ...passThroughProps} = this.props;
       console.log('Own props: ', [name, listed]);
