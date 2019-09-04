@@ -12,6 +12,7 @@ const Tree = () => (
     <JSX.Button kind="primary" onClick={() => console.log('Button pressed')}>
       Hello, world!
     </JSX.Button>
+    <JSX.TodoList />
   </div>
 );
 

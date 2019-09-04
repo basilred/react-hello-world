@@ -37,4 +37,17 @@ const Button = props => {
   return <button className={className} {...other} />;
 };
 
-export { jsxBtn, vanillaBtn, NumberDescriber, Button };
+function Item(props) {
+  return <li>{props.message}</li>;
+}
+
+function TodoList() {
+  const todos = ['finish doc', 'submit pr', 'nag dan to review'];
+  return (
+    <ul>
+      {todos.map(todo => <Item key={todo} message={todo} />)}
+    </ul>
+  );
+}
+
+export { jsxBtn, vanillaBtn, NumberDescriber, Button, TodoList };
