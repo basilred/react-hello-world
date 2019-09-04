@@ -31,4 +31,10 @@ function NumberDescriber(props) {
   return <div>{props.number} является {description} числом</div>;
 }
 
-export { jsxBtn, vanillaBtn, NumberDescriber };
+const Button = props => {
+  const { kind, ...other } = props;
+  const className = kind === 'primary' ? 'PrimaryButton' : 'SecondaryButton';
+  return <button className={className} {...other} />;
+};
+
+export { jsxBtn, vanillaBtn, NumberDescriber, Button };
