@@ -13,6 +13,7 @@ const Tree = () => (
       Hello, world!
     </JSX.Button>
     <JSX.TodoList />
+    <JSX.ListOfTenThings />
   </div>
 );
 
