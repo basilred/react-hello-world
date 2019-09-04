@@ -21,4 +21,14 @@ const vanillaBtn = React.createElement(
   'Touch me orange'
 );
 
-export { jsxBtn, vanillaBtn };
+function NumberDescriber(props) {
+  let description;
+  if (props.number % 2 === 0) {
+    description = <strong>чётным</strong>;
+  } else {
+    description = <i>нечётным</i>;
+  }
+  return <div>{props.number} является {description} числом</div>;
+}
+
+export { jsxBtn, vanillaBtn, NumberDescriber };

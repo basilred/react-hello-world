@@ -7,6 +7,8 @@ const Tree = () => (
   <div className="Tree">
     {JSX.jsxBtn}
     {JSX.vanillaBtn}
+    <JSX.NumberDescriber number={5} />
+    <JSX.NumberDescriber number={12} />
   </div>
 );
 
