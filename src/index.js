@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { List, withLogs } from './HOC';
-
-const ListWithLogs = withLogs(List);
-const list = ['first', 'second', 'third'];
+import * as JSX from './JSX';
 
 const Tree = () => (
   <div className="Tree">
-    <List list={list} />
-    <ListWithLogs name="Logs" listed={true} list={list} />
+    {JSX.jsxBtn}
+    {JSX.vanillaBtn}
+    <JSX.NumberDescriber number={5} />
+    <JSX.NumberDescriber number={12} />
+    <JSX.Button kind="primary" onClick={() => console.log('Button pressed')}>
+      Hello, world!
+    </JSX.Button>
+    <JSX.TodoList />
+    <JSX.ListOfTenThings />
   </div>
 );
 
